@@ -1,0 +1,64 @@
+// ==========================================================================
+// Global variables
+// ==========================================================================
+
+// Font-stacks
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+$font-family--primary    : 'Lato', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--light      : 300;
+$font-weight--regular    : 400;
+$font-weight--bold       : 700;
+
+// Text
+$base__font-size--xsm    : 10px;
+$base__font-size--sm     : 12px;
+$base__font-size--md     : 16px;
+$base__font-size--lg     : 24px;
+
+// ============================================
+
+//Colors
+// Descriptive color variables
+$white                   : #fff;
+$black                   : #000;
+
+$mulled-wine             : #4D4C72;
+$dusty-gray              : #9C9C9C;
+$alabaster               : #FBFBFB;
+
+$button-colors-default : $mulled-wine;
+
+// Functional color variables
+
+$color--prim         : $dusty-gray ;
+$color--bg           : $alabaster;
+//
+$color-text          : $color--prim;
+$color-link--default : $white;
+// ============================================
+
+// Icon size
+$icon--sm : 35px;
+$icon--md : 55px;
+
+// ============================================
+
+
+// Border radius
+
+$br--default    : 0.4em;
+$br--round    : 50%;
+
+// Transitions
+
+$trns-duration  : .3s;
+
+// ============================================
+
+//Breakpoints
+$brkpoint--sm    : 320px;
+$brkpoint--md    : 768px;
+$brkpoint--lg    : 1024px;

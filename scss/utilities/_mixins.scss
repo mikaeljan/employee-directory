@@ -1,0 +1,58 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+// Media queries
+@mixin mq($break) {
+  @if $break == "mobile" {
+    @media (min-width: $brkpoint-sm) {
+      @content;
+    }
+  }
+  @else if $break == "tablet" {
+    @media (min-width: $brkpoint-md) {
+      @content;
+    }
+  }
+  @else if $break == "desktop" {
+    @media (min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+// Element and Modifier BEM Selectors
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Flexbox settings
+
+// Flexbox display
+@mixin flexbox() {
+  display: flex;
+}
+// Flex Flow Direction
+// - applies to: flex containers
+@mixin flex-direction($direction) {
+  flex-direction: $direction;
+}
+// Axis Alignment
+// - applies to: flex containers
+@mixin justify-content($justify) {
+  justify-content: $justify;
+}
+// Cross-axis Alignment
+// - applies to: flex containers
+@mixin align-items($align) {
+  align-items: $align;
+}
