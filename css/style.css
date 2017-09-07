@@ -425,6 +425,21 @@ h2,
 p {
   margin: 0; }
 
+.container {
+  background-color: #FBFBFB;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%; }
+
+.main-header {
+  text-align: center; }
+
 .icon {
   width: 35px; }
 
@@ -433,5 +448,14 @@ p {
   width: 55px;
   height: 55px;
   border-radius: 50%; }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.25em; }
+
+.main-footer {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

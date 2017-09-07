@@ -4,7 +4,7 @@
 
 // Calculate em values
 
-@function em($target, $context: $base__font-size) {
+@function em($target, $context: $base__font-size--md) {
   @return ($target / $context) * 1em;
 }
 // Import Google font if it exists

@@ -25,7 +25,7 @@
 
 // Element and Modifier BEM Selectors
 @mixin e($element) {
-  &__#{$element} {
+  &-#{$element} {
     @content;
   }
 }

@@ -1,0 +1,15 @@
+// ======================================
+//  Profiles
+// ======================================
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: em(20px);
+  @include e("image") {
+
+  }
+  @include e("text") {
+
+  }
+}
