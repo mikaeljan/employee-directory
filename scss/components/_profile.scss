@@ -7,9 +7,12 @@
   width: 100%;
   padding: em(20px);
   @include e("image") {
-
+    vertical-align: middle;
+    width: $icon--md;
+    height: $icon--md;
+    border-radius: $br--round;
   }
   @include e("text") {
-
+    font-size: $base__font-size--md;
   }
 }

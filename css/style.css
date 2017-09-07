@@ -428,10 +428,10 @@ p {
 .container {
   background-color: #FBFBFB;
   display: flex;
-  min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  min-height: 100vh; }
 
-.gallery {
+#gallery {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -440,20 +440,18 @@ p {
 .main-header {
   text-align: center; }
 
-.icon {
-  width: 35px; }
-
-.icon-logo {
-  vertical-align: middle;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%; }
-
 .profile {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 1.25em; }
+  .profile-image {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; }
+  .profile-text {
+    font-size: 16px; }
 
 .main-footer {
   text-align: center; }

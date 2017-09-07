@@ -1,15 +1,14 @@
 // ======================================
 //  Containers
 // ======================================
-
 .container {
   background-color: $color--bg;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
   }
 
-.gallery {
+#gallery {
   display:flex;
   flex-direction: column;
   flex-grow:1;
