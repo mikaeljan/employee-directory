@@ -33,7 +33,8 @@ $button-colors-default : $mulled-wine;
 
 // Functional color variables
 
-$color--prim         : $dusty-gray ;
+$color--prim         : $black ;
+$color--sec          : $dusty-gray ;
 $color--bg           : $alabaster;
 //
 $color-text          : $color--prim;
@@ -41,8 +42,9 @@ $color-link--default : $white;
 // ============================================
 
 // Icon size
-$icon--sm : 35px;
-$icon--md : 55px;
+$icon--sm : 40px;
+$icon--md : 65px;
+$icon--lg : 90px;
 
 // ============================================
 
@@ -59,6 +61,8 @@ $trns-duration  : .3s;
 // ============================================
 
 //Breakpoints
-$brkpoint--sm    : 320px;
-$brkpoint--md    : 768px;
-$brkpoint--lg    : 1024px;
+$brkpoint--xsm   : 320px;
+$brkpoint--sm    : 425px;
+$brkpoint--md    : 600px;
+$brkpoint--lg    : 768px;
+$brkpoint--xlg    : 1024px;

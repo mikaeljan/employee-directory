@@ -2,5 +2,11 @@
 //  Containers
 // ======================================
 .main-header {
+  color: $white;
+  background-color: $black;
+  padding: em(10px) em(5px);
   text-align: center;
+  @include mq("desktop"){
+    text-align: left;
+  }
 }

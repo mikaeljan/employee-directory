@@ -2,7 +2,7 @@
 //  Containers
 // ======================================
 .container {
-  background-color: $color--bg;
+  background-color: darken($color--bg, 3%);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -11,6 +11,15 @@
 #gallery {
   display:flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   flex-grow:1;
   width: 100%;
+  margin: em(20px) 0;
+  @include mq("tablet-sm"){
+    flex-direction: row;
+  }
+  @include mq('desktop') {
+  }
 }

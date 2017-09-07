@@ -426,7 +426,7 @@ p {
   margin: 0; }
 
 .container {
-  background-color: #FBFBFB;
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
@@ -434,26 +434,84 @@ p {
 #gallery {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   flex-grow: 1;
-  width: 100%; }
+  width: 100%;
+  margin: 1.25em 0; }
+  @media (min-width: 600px) {
+    #gallery {
+      flex-direction: row; } }
 
 .main-header {
+  color: #fff;
+  background-color: #000;
+  padding: 0.625em 0.3125em;
   text-align: center; }
+  @media (min-width: 1024px) {
+    .main-header {
+      text-align: left; } }
 
 .profile {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 1.25em; }
+  align-items: center;
+  background-color: #fff;
+  width: 80%;
+  margin: 0.625em 0.9375em;
+  border: 2px #d5d5d5 solid;
+  border-radius: 0.4em; }
+  .profile:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+  @media (min-width: 425px) {
+    .profile {
+      flex-direction: row;
+      padding: 0.625em 0.9375em; } }
+  @media (min-width: 600px) {
+    .profile {
+      width: 42%; } }
+  @media (min-width: 1024px) {
+    .profile {
+      padding: 0.9375em 1.25em;
+      width: 30%; } }
   .profile-image {
     vertical-align: middle;
-    width: 55px;
-    height: 55px;
+    margin: 0.625em;
+    min-width: 65px;
+    min-height: 65px;
     border-radius: 50%; }
+    @media (min-width: 600px) {
+      .profile-image {
+        margin: 0.625em 0.625em 0.625em 0; } }
+    @media (min-width: 1024px) {
+      .profile-image {
+        min-width: 90px;
+        min-height: 90px; } }
   .profile-text {
+    color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.9375em 0.625em;
     font-size: 16px; }
+    @media (min-width: 425px) {
+      .profile-text {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: flex-start;
+        margin: 0; } }
+    .profile-text--email {
+      color: #9C9C9C; }
+    .profile-text--city {
+      color: #9C9C9C; }
 
 .main-footer {
-  text-align: center; }
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  padding: 0.625em 0; }
 
 /*# sourceMappingURL=style.css.map */

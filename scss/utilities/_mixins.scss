@@ -3,18 +3,28 @@
 // ==========================================================================
 // Media queries
 @mixin mq($break) {
-  @if $break == "mobile" {
-    @media (min-width: $brkpoint-sm) {
+  @if $break == "mobile-sm" {
+    @media (min-width: $brkpoint--xsm) {
       @content;
     }
   }
-  @else if $break == "tablet" {
-    @media (min-width: $brkpoint-md) {
+  @else if $break == "mobile-md" {
+    @media (min-width: $brkpoint--sm) {
+      @content;
+    }
+  }
+  @else if $break == "tablet-sm" {
+    @media (min-width: $brkpoint--md) {
+      @content;
+    }
+  }
+  @else if $break == "tablet-md" {
+    @media (min-width: $brkpoint--lg) {
       @content;
     }
   }
   @else if $break == "desktop" {
-    @media (min-width: $brkpoint-lg) {
+    @media (min-width: $brkpoint--xlg) {
       @content;
     }
   }

@@ -4,15 +4,60 @@
 .profile {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: em(20px);
+  align-items: center;
+  background-color: $white;
+  width: 80%;
+  margin: em(10px) em(15px);
+  border: 2px darken($color--bg, 15%) solid;
+  border-radius: $br--default;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  @include mq("mobile-md"){
+    flex-direction: row;
+    padding: em(10px) em(15px);
+  }
+  @include mq("tablet-sm"){
+    width: 42%;
+  }
+  @include mq("desktop"){
+    padding: em(15px) em(20px);
+    width: 30%;
+  }
   @include e("image") {
     vertical-align: middle;
-    width: $icon--md;
-    height: $icon--md;
+    margin: em(10px);
+    min-width: $icon--md;
+    min-height: $icon--md;
     border-radius: $br--round;
+    @include mq("tablet-sm"){
+      margin:em(10px) em(10px) em(10px) 0;
+    }
+    @include mq("desktop"){
+      min-width: $icon--lg;
+      min-height: $icon--lg;
+    }
   }
   @include e("text") {
+    color: $color--prim;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 em(15px) em(10px);
     font-size: $base__font-size--md;
+    @include mq("mobile-md"){
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: flex-start;
+      margin: 0;
+    }
+    @include m("email") {
+      color: $color--sec;
+    }
+    @include m("city") {
+      color: $color--sec;
+    }
   }
 }
