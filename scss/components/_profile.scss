@@ -2,6 +2,7 @@
 //  Profiles
 // ======================================
 .profile {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,6 +41,7 @@
     }
   }
   @include e("text") {
+    text-decoration: none;
     color: $color--prim;
     overflow: hidden;
     display:flex;
@@ -55,9 +57,22 @@
     }
     @include m("email") {
       color: $color--sec;
+      &:hover {
+        color: darken($color--sec, 20%);
+      }
     }
     @include m("city") {
       color: $color--sec;
     }
   }
+}
+
+.hidden {
+  display:none;
+  text-align: center;
+
+}
+.hidden .profile-text {
+  align-items: center;
+  line-height: 2em;
 }

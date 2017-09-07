@@ -420,6 +420,9 @@ body {
   font-size: 16px;
   font-family: "Lato", Helvetica, Arial, sans-serif; }
 
+a {
+  text-decoration: none; }
+
 h1,
 h2,
 p {
@@ -454,6 +457,7 @@ p {
       text-align: left; } }
 
 .profile {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -487,9 +491,10 @@ p {
         margin: 0.625em 0.625em 0.625em 0; } }
     @media (min-width: 1024px) {
       .profile-image {
-        min-width: 90px;
-        min-height: 90px; } }
+        min-width: 100px;
+        min-height: 100px; } }
   .profile-text {
+    text-decoration: none;
     color: #000;
     overflow: hidden;
     display: flex;
@@ -505,8 +510,18 @@ p {
         margin: 0; } }
     .profile-text--email {
       color: #9C9C9C; }
+      .profile-text--email:hover {
+        color: dimgray; }
     .profile-text--city {
       color: #9C9C9C; }
+
+.hidden {
+  display: none;
+  text-align: center; }
+
+.hidden .profile-text {
+  align-items: center;
+  line-height: 2em; }
 
 .main-footer {
   color: #fff;
