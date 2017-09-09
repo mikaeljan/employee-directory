@@ -495,7 +495,7 @@ p {
         min-height: 100px; } }
   .profile-text {
     text-decoration: none;
-    color: #000;
+    color: #9C9C9C;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -508,12 +508,10 @@ p {
         justify-content: stretch;
         align-items: flex-start;
         margin: 0; } }
-    .profile-text--email {
-      color: #9C9C9C; }
-      .profile-text--email:hover {
-        color: dimgray; }
-    .profile-text--city {
-      color: #9C9C9C; }
+    .profile-text--email:hover {
+      color: dimgray; }
+    .profile-text--name {
+      color: #000; }
 
 .hidden {
   display: none;

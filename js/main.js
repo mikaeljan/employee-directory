@@ -22,7 +22,7 @@ $(document).ready(function() {
             const profileCity   = titleCase(user.location.city);
 
             const $profileName  = $("<h2 class='profile-text--name'></h2>");
-            const $profileEmail = $("<a class='profile-text--email' href='mailto:"+user.email+"'></a>");
+            const $profileEmail = $("<span class='profile-text--email' href='mailto:"+user.email+"'></span>");
             const $profileCity  = $("<p class='profile-text--city'></p>");
 
             $profileName.text(profileName);
@@ -39,22 +39,26 @@ $(document).ready(function() {
             $hiddenDiv.append($profileTextHidden);
 
             const $profilePhone     = $("<span class='profile-text--phone'></span>");
-            const $profileStreet    = $("<span class='profile-text--street'></span>");
+            const $profileFullAddress= $("<span class='profile-text--street'></span>");
             const $profileBirthday  = $("<span class='profile-text--birthday'></span>");
 
             const profilePhone  = user.phone;
-            const profileStreet  = titleCase(user.location.street);
-            const profileBirthday   = "Birthday: "+ "XXX";
+            const profileStreetNo  = user.location.street.split(" ")[0];
+            const profileZipCode  = user.location.postcode;
+            const profileStreet  = titleCase(user.location.street.split(" ")[1]);
+            const profileState  = titleCase(user.location.state);
+            const profileFullAddress  = titleCase(user.location.street.substr(5))+" "+ profileStreetNo+", "+profileCity+", "+profileState +", "+profileZipCode;
+            const profileBirthday   = "Birthday: "+user.dob.split(" ")[0];
 
             $profilePhone.text(profilePhone);
-            $profileStreet.text(profileStreet);
+            $profileFullAddress.text(profileFullAddress);
             $profileBirthday.text(profileBirthday);
 
             $profileName.clone().appendTo($profileTextHidden);
             $profileEmail.clone().appendTo($profileTextHidden);
             $profileCity.clone().appendTo($profileTextHidden);
 
-            $profileTextHidden.append($profilePhone).append($profileStreet).append($profileBirthday);
+            $profileTextHidden.append($profilePhone).append($profileFullAddress).append($profileBirthday);
         });
 
     };

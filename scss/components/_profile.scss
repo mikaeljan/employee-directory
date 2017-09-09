@@ -2,6 +2,7 @@
 //  Profiles
 // ======================================
 .profile {
+
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@
   }
   @include e("text") {
     text-decoration: none;
-    color: $color--prim;
+    color: $color--sec;
     overflow: hidden;
     display:flex;
     flex-direction: column;
@@ -56,13 +57,12 @@
       margin: 0;
     }
     @include m("email") {
-      color: $color--sec;
       &:hover {
         color: darken($color--sec, 20%);
       }
     }
-    @include m("city") {
-      color: $color--sec;
+    @include m("name") {
+      color:$color--prim;
     }
   }
 }
