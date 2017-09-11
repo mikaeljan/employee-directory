@@ -4,7 +4,7 @@ $(document).ready(function() {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const $gallery = $("#gallery");
-    const randomAPI = 'https://randomuser.me/api/?results=10';
+    const randomAPI = 'https://randomuser.me/api/?results=12';
     const displayProfile = (data) => {
         console.log(data);
         $.each(data.results, (i,user)=>{
